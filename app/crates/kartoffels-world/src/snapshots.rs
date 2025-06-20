@@ -61,7 +61,7 @@ impl BotsSnapshot {
         self.get(id).is_some()
     }
 
-    pub fn get(&self, id: BotId) -> Option<BotSnapshot> {
+    pub fn get(&self, id: BotId) -> Option<BotSnapshot<'_>> {
         if let Some(bot) = self.alive.get(id) {
             return Some(BotSnapshot::Alive(bot));
         }

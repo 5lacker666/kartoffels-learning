@@ -60,7 +60,7 @@ const SIZE: UVec2 = uvec2(AREA.x + ENTRANCE_LEN, AREA.y);
 const TIMMY_POS: IVec2 = ivec2(1, 1);
 const SPAWN_POS: IVec2 = ivec2(35 + (ENTRANCE_LEN as i32), 17);
 
-fn run(store: &Store, game: GameCtrl) -> BoxFuture<Result<()>> {
+fn run(store: &Store, game: GameCtrl) -> BoxFuture<'_, Result<()>> {
     info!("run()");
 
     Box::pin(async move {

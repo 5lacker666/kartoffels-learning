@@ -11,7 +11,7 @@ pub struct Spinner {
 impl Spinner {
     const ICONS: &[&str] = &["|", "/", "-", "\\"];
 
-    pub fn as_span(&mut self) -> Span {
+    pub fn as_span(&mut self) -> Span<'static> {
         let icon = self.instant.elapsed().as_millis() / 250;
         let icon = (icon as usize) % Self::ICONS.len();
 

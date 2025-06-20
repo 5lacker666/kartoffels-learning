@@ -1,5 +1,4 @@
 #![feature(map_try_insert)]
-#![feature(result_flattening)]
 #![feature(try_blocks)]
 
 mod common;

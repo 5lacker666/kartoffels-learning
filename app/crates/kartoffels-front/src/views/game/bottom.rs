@@ -147,7 +147,7 @@ impl BottomPanel {
         ui.add_at(area, span);
     }
 
-    fn status(view: &View) -> Option<Span> {
+    fn status(view: &View) -> Option<Span<'_>> {
         if let Some((label, tt)) = &view.label {
             let span = Span::raw(label);
             let blink = tt.elapsed().as_millis() % 1000 <= 500;

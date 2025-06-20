@@ -1,6 +1,5 @@
-#![feature(duration_constructors)]
+#![feature(duration_constructors_lite)]
 #![feature(let_chains)]
-#![feature(result_flattening)]
 #![feature(try_blocks)]
 
 mod session;

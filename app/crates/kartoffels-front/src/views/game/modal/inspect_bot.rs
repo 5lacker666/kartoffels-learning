@@ -333,7 +333,7 @@ impl Tab {
         [Self::Stats, Self::Events, Self::Lives].into_iter()
     }
 
-    fn btn(&self) -> Button<Event> {
+    fn btn(&self) -> Button<'static, Event> {
         match self {
             Self::Stats => Button::new("stats", KeyCode::Char('s')),
             Self::Events => Button::new("events", KeyCode::Char('e')),

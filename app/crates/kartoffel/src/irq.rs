@@ -238,7 +238,7 @@ unsafe fn irq_fn(ptr: u32) -> Option<IrqFn> {
 /// IRQ handler, i.e. a function executed when an IRQ is raised.
 ///
 /// See: [`irq_set()`], [`irq_get()`], [`irq_take()`].
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug)]
 #[repr(transparent)]
 pub struct IrqFn(extern "C" fn(u32));
 

@@ -61,7 +61,7 @@ static CONGRATS_MSG: LazyLock<Msg> = LazyLock::new(|| {
 
 const SIZE: UVec2 = uvec2(41, 21);
 
-fn run(store: &Store, game: GameCtrl) -> BoxFuture<Result<()>> {
+fn run(store: &Store, game: GameCtrl) -> BoxFuture<'_, Result<()>> {
     info!("run()");
 
     Box::pin(async move {

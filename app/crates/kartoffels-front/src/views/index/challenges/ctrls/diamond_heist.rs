@@ -79,7 +79,7 @@ static CONGRATS_MSG: LazyLock<Msg> = LazyLock::new(|| {
         .build()
 });
 
-fn run(store: &Store, game: GameCtrl) -> BoxFuture<Result<()>> {
+fn run(store: &Store, game: GameCtrl) -> BoxFuture<'_, Result<()>> {
     info!("run()");
 
     Box::pin(async move {

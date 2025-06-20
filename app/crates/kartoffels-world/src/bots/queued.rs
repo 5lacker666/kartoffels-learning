@@ -46,7 +46,7 @@ impl QueuedBots {
         self.index.contains_key(&id)
     }
 
-    pub fn iter_mut(&mut self) -> impl Iterator<Item = QueuedBotEntryMut> {
+    pub fn iter_mut(&mut self) -> impl Iterator<Item = QueuedBotEntryMut<'_>> {
         self.entries.iter_mut().enumerate().map(|(idx, bot)| {
             QueuedBotEntryMut {
                 bot,
